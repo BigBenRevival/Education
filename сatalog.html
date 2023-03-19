@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Catalog</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-menu">
+        <div class="header-menu__gender">
+            <a class="header-menu__item-gender" href="">
+                <svg class="header-menu__svg-gender" viewBox="0 0 288 512" title="venus">
+                    <path d="M288 176c0-79.5-64.5-144-144-144S0 96.5 0 176c0 68.5 47.9 125.9 112 140.4V368H76c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h36v36c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-36h36c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-36v-51.6c64.1-14.5 112-71.9 112-140.4zm-224 0c0-44.1 35.9-80 80-80s80 35.9 80 80-35.9 80-80 80-80-35.9-80-80z"/>
+                </svg>
+                Женское
+            </a>
+            <a class="header-menu__item-gender" href="">
+                <svg class="header-menu__svg-gender" viewBox="0 0 384 512" title="mars">
+                    <path d="M372 64h-79c-10.7 0-16 12.9-8.5 20.5l16.9 16.9-80.7 80.7c-22.2-14-48.5-22.1-76.7-22.1C64.5 160 0 224.5 0 304s64.5 144 144 144 144-64.5 144-144c0-28.2-8.1-54.5-22.1-76.7l80.7-80.7 16.9 16.9c7.6 7.6 20.5 2.2 20.5-8.5V76c0-6.6-5.4-12-12-12zM144 384c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"/>
+                </svg>
+                Мужское
+            </a>
+            <a class="header-menu__item-gender" href="">
+                <svg class="header-menu__svg-gender" viewBox="0 0 384 512" title="baby">
+                    <path d="M192 160c44.2 0 80-35.8 80-80S236.2 0 192 0s-80 35.8-80 80 35.8 80 80 80zm-53.4 248.8l25.6-32-61.5-51.2L56.8 383c-11.4 14.2-11.7 34.4-.8 49l48 64c7.9 10.5 19.9 16 32 16 8.3 0 16.8-2.6 24-8 17.7-13.2 21.2-38.3 8-56l-29.4-39.2zm142.7-83.2l-61.5 51.2 25.6 32L216 448c-13.2 17.7-9.7 42.8 8 56 7.2 5.4 15.6 8 24 8 12.2 0 24.2-5.5 32-16l48-64c10.9-14.6 10.6-34.8-.8-49l-45.9-57.4zM376.7 145c-12.7-18.1-37.6-22.4-55.7-9.8l-40.6 28.5c-52.7 37-124.2 37-176.8 0L63 135.3C44.9 122.6 20 127 7.3 145-5.4 163.1-1 188 17 200.7l40.6 28.5c17 11.9 35.4 20.9 54.4 27.9V288h160v-30.8c19-7 37.4-16 54.4-27.9l40.6-28.5c18.1-12.8 22.4-37.7 9.7-55.8z"/>
+                </svg>
+                Детское
+            </a>
+        </div>
+        <div class="header-menu__menu">
+            <a>
+                <svg class="header-menu__svg-menu" viewBox="0 0 448 512" title="bars">
+                    <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/>
+                </svg>
+            </a>
+        </div>
+        <div class="header-menu__header-logo">
+            <div class="header-menu__logo-name">
+                Catalog
+            </div>
+            <div class="header-menu__location">
+                - Kursk -
+            </div>
+        </div>
+        <div class="header-menu__menu-right">
+            <a class="header-menu__leng" href="">
+                <svg class="header-menu__svg-right" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                    <defs>
+                        <path id="a"
+                              d="M.832 14A9.966 9.966 0 0 1 0 10c0-1.422.297-2.775.832-4h18.336A9.966 9.966 0 0 1 20 10a9.966 9.966 0 0 1-.832 4H.832z"></path>
+                        <path id="b" d="M.832 6C2.375 2.468 5.9 0 10 0c4.1 0 7.625 2.468 9.168 6H.832z"></path>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd" transform="translate(2 2)">
+                        <path fill="#D55858"
+                              d="M.832 14h18.336A10.002 10.002 0 0 1 10 20c-4.1 0-7.625-2.468-9.168-6z"></path>
+                        <use fill="#406FA7" xlink:href="#a"></use>
+                        <use fill="#F6F6F6" xlink:href="#b"></use>
+                    </g>
+                </svg>
+                RU/MSK
+            </a>
+            <a class="header-menu__right-item" href="">
+                <svg class="header-menu__svg-right" viewBox="0 0 512 512" title="search">
+                    <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/>
+                </svg>
+            </a>
+            <a class="header-menu__right-item" href="">
+                <svg class="header-menu__svg-right" viewBox="0 0 576 512" title="shopping-cart">
+                    <path d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"/>
+                </svg>
+                <div class="header-menu__count">
+                    <b>0</b>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="main-menu main-menu--background-darkgrey">
+        <ul class="main-menu__list">
+            <li class="main-menu__item"><a class="main-menu__link" href="">БРЕНДЫ</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="">ОБУВЬ</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="">СУМКИ</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="">ДЕТСКАЯ ОДЕЖДА</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="">АКСЕССУАРЫ</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="">ОДЕЖДА</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="">FINAL SALE</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="">ДОСТАВКА <br>И ОПЛАТА</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="">КОНТАКТЫ</a></li>
+        </ul>
+    </div>
+</header>
+<div class="content">
+    <div class="item-box">
+        <div class="filter-box">
+            <p class="filter-box__name">Фильтры</p>
+            <details class="filter-box__details">
+                <summary class="filter-box__summary">БРЕНД</summary>
+                <div class="filter-box__filter-point">
+                    <label><input class="filter-box__custom-input" type="checkbox" name="" id="CbAdidas"><span
+                            class="filter-box__filter-argument">Adidas</span></label>
+                </div>
+                <div class="filter-box__filter-point">
+                    <label><input class="filter-box__custom-input" type="checkbox" name="" id="CbAlexanderMcQueen"><span
+                            class="filter-box__filter-argument">Alexander McQueen</span></label>
+                </div>
+                <div class="filter-box__filter-point">
+                    <label><input class="filter-box__custom-input" type="checkbox" name="" id="CbAlexanderWang"><span
+                            class="filter-box__filter-argument">Alexander Wang</span></label>
+                </div>
+                <div class="filter-box__filter-point">
+                    <label><input class="filter-box__custom-input" type="checkbox" name="" id="CbAminaMuaddi"><span
+                            class="filter-box__filter-argument">Amina Muaddi</span></label>
+                </div>
+                <div class="filter-box__filter-point">
+                    <label><input class="filter-box__custom-input" type="checkbox" name=""
+                                  id="CbAnnDemeulemeester"><span
+                            class="filter-box__filter-argument">Ann Demeulemeester</span></label>
+                </div>
+            </details>
+            <details class="filter-box__details">
+                <summary class="filter-box__summary">ПОЛ</summary>
+                <div class="filter-box__filter-point">
+                    <label><input class="filter-box__custom-input" type="checkbox" name="" id="CbChildren"><span
+                            class="filter-box__filter-argument">Детское</span></label>
+                </div>
+                <div class="filter-box__filter-point">
+                    <label><input class="filter-box__custom-input" type="checkbox" name="" id="CbFemale"><span
+                            class="filter-box__filter-argument">Женское</span></label>
+                </div>
+                <div class="filter-box__filter-point">
+                    <label><input class="filter-box__custom-input" type="checkbox" name="" id="CbMale"><span
+                            class="filter-box__filter-argument">Мужское</span></label>
+                </div>
+            </details>
+        </div>
+        <div class="item-list">
+            <div class="item-list__item">
+                <div class="item-list__duplex-box">
+                    <a data-fancybox data-src="img/photo.jpg"><img src="img/photo.jpg" alt=""></a>
+                </div>
+                <h3 class="item-list__item-name">Название</h3>
+                <p class="item-list__item-text">Небольшое описание картинки для проверки переноса строки</p>
+                <div class="item-list__prices-list">
+                    <p class="item-list__price"><b>10 000 ₽</b></p>
+                    <p class="item-list__price-without-disc"><s>100 000 ₽</s></p>
+                    <p class="item-list__discount">(90%)</p>
+                </div>
+            </div>
+            <div class="item-list__item">
+                <div class="item-list__duplex-box">
+                    <a data-fancybox data-src="img/photo.jpg"><img src="img/photo.jpg" alt=""></a>
+                </div>
+                <h3 class="item-list__item-name">Название</h3>
+                <p class="item-list__item-text">Небольшое описание картинки для проверки переноса строки</p>
+                <div class="item-list__prices-list">
+                    <p class="item-list__price"><b>10 000 ₽</b></p>
+                    <p class="item-list__price-without-disc"><s>100 000 ₽</s></p>
+                    <p class="item-list__discount">(90%)</p>
+                </div>
+            </div>
+            <div class="item-list__item">
+                <div class="item-list__duplex-box">
+                    <a data-fancybox data-src="img/photo.jpg"><img src="img/photo.jpg" alt=""></a>
+                </div>
+                <h3 class="item-list__item-name">Название</h3>
+                <p class="item-list__item-text">Небольшое описание картинки для проверки переноса строки</p>
+                <div class="item-list__prices-list">
+                    <p class="item-list__price"><b>10 000 ₽</b></p>
+                    <p class="item-list__price-without-disc"><s>100 000 ₽</s></p>
+                    <p class="item-list__discount">(90%)</p>
+                </div>
+            </div>
+            <div class="item-list__item">
+                <div class="item-list__duplex-box">
+                    <a data-fancybox data-src="img/photo.jpg"><img src="img/photo.jpg" alt=""></a>
+                </div>
+                <h3 class="item-list__item-name">Название</h3>
+                <p class="item-list__item-text">Небольшое описание картинки для проверки переноса строки</p>
+                <div class="item-list__prices-list">
+                    <p class="item-list__price"><b>10 000 ₽</b></p>
+                    <p class="item-list__price-without-disc"><s>100 000 ₽</s></p>
+                    <p class="item-list__discount">(90%)</p>
+                </div>
+            </div>
+            <!--<div class="item-list__item">
+                <div class="item-list__duplex-box">
+                    <img class="item-list__front-img"
+                         src="https://images.unsplash.com/photo-1584590069631-1c180f90a54c?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzM0MzA2MjU&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                    <img class="item-list__back-img"
+                         src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzQ5MTgzOTI&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                </div>
+                <h3 class="item-list__item-name">Название</h3>
+                <p class="item-list__item-text">Небольшое описание картинки для проверки переноса строки</p>
+                <div class="item-list__prices-list">
+                    <p class="item-list__price"><b>10 000 ₽</b></p>
+                    <p class="item-list__price-without-disc"><s>100 000 ₽</s></p>
+                    <p class="item-list__discount">(90%)</p>
+                </div>
+            </div>
+            <div class="item-list__item">
+                <div class="item-list__duplex-box">
+                    <img class="item-list__front-img"
+                         src="https://images.unsplash.com/photo-1584590069631-1c180f90a54c?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzM0MzA2MjU&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                    <img class="item-list__back-img"
+                         src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzQ5MTgzOTI&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                </div>
+                <h3 class="item-list__item-name">Название</h3>
+                <p class="item-list__item-text">Небольшое описание картинки для проверки переноса строки</p>
+                <div class="item-list__prices-list">
+                    <p class="item-list__price"><b>10 000 ₽</b></p>
+                    <p class="item-list__price-without-disc"><s>100 000 ₽</s></p>
+                    <p class="item-list__discount">(90%)</p>
+                </div>
+            </div>
+            <div class="item-list__item">
+                <div class="item-list__duplex-box">
+                    <img class="item-list__front-img"
+                         src="https://images.unsplash.com/photo-1584590069631-1c180f90a54c?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzM0MzA2MjU&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                    <img class="item-list__back-img"
+                         src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzQ5MTgzOTI&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                </div>
+                <h3 class="item-list__item-name">Название</h3>
+                <p class="item-list__item-text">Небольшое описание картинки для проверки переноса строки</p>
+                <div class="item-list__prices-list">
+                    <p class="item-list__price"><b>10 000 ₽</b></p>
+                    <p class="item-list__price-without-disc"><s>100 000 ₽</s></p>
+                    <p class="item-list__discount">(90%)</p>
+                </div>
+            </div>
+            <div class="item-list__item">
+                <div class="item-list__duplex-box">
+                    <img class="item-list__front-img"
+                         src="https://images.unsplash.com/photo-1584590069631-1c180f90a54c?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzM0MzA2MjU&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                    <img class="item-list__back-img"
+                         src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzQ5MTgzOTI&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                </div>
+                <h3 class="item-list__item-name">Название</h3>
+                <p class="item-list__item-text">Небольшое описание картинки для проверки переноса строки</p>
+                <div class="item-list__prices-list">
+                    <p class="item-list__price"><b>10 000 ₽</b></p>
+                    <p class="item-list__price-without-disc"><s>100 000 ₽</s></p>
+                    <p class="item-list__discount">(90%)</p>
+                </div>
+            </div>
+            <div class="item-list__item">
+                <div class="item-list__duplex-box">
+                    <img class="item-list__front-img"
+                         src="https://images.unsplash.com/photo-1584590069631-1c180f90a54c?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzM0MzA2MjU&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                    <img class="item-list__back-img"
+                         src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzQ5MTgzOTI&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                </div>
+                <h3 class="item-list__item-name">Название</h3>
+                <p class="item-list__item-text">Небольшое описание картинки для проверки переноса строки</p>
+                <div class="item-list__prices-list">
+                    <p class="item-list__price"><b>10 000 ₽</b></p>
+                    <p class="item-list__price-without-disc"><s>100 000 ₽</s></p>
+                    <p class="item-list__discount">(90%)</p>
+                </div>
+            </div>
+            <div class="item-list__item">
+                <div class="item-list__duplex-box">
+                    <img class="item-list__front-img"
+                         src="https://images.unsplash.com/photo-1584590069631-1c180f90a54c?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzM0MzA2MjU&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                    <img class="item-list__back-img"
+                         src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzQ5MTgzOTI&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                </div>
+                <h3 class="item-list__item-name">Название</h3>
+                <p class="item-list__item-text">Небольшое описание картинки для проверки переноса строки</p>
+                <div class="item-list__prices-list">
+                    <p class="item-list__price"><b>10 000 ₽</b></p>
+                    <p class="item-list__price-without-disc"><s>100 000 ₽</s></p>
+                    <p class="item-list__discount">(90%)</p>
+                </div>
+            </div>
+            <div class="item-list__item">
+                <div class="item-list__duplex-box">
+                    <img class="item-list__front-img"
+                         src="https://images.unsplash.com/photo-1584590069631-1c180f90a54c?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzM0MzA2MjU&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                    <img class="item-list__back-img"
+                         src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzQ5MTgzOTI&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                </div>
+                <h3 class="item-list__item-name">Название</h3>
+                <p class="item-list__item-text">Небольшое описание картинки для проверки переноса строки</p>
+                <div class="item-list__prices-list">
+                    <p class="item-list__price"><b>10 000 ₽</b></p>
+                    <p class="item-list__price-without-disc"><s>100 000 ₽</s></p>
+                    <p class="item-list__discount">(90%)</p>
+                </div>
+            </div>
+            <div class="item-list__item">
+                <div class="item-list__duplex-box">
+                    <img class="item-list__front-img"
+                         src="https://images.unsplash.com/photo-1584590069631-1c180f90a54c?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzM0MzA2MjU&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                    <img class="item-list__back-img"
+                         src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzQ5MTgzOTI&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                </div>
+                <h3 class="item-list__item-name">Название</h3>
+                <p class="item-list__item-text">Небольшое описание картинки для проверки переноса строки</p>
+                <div class="item-list__prices-list">
+                    <p class="item-list__price"><b>10 000 ₽</b></p>
+                    <p class="item-list__price-without-disc"><s>100 000 ₽</s></p>
+                    <p class="item-list__discount">(90%)</p>
+                </div>
+            </div>
+            <div class="item-list__item">
+                <div class="item-list__duplex-box">
+                    <img class="item-list__front-img"
+                         src="https://images.unsplash.com/photo-1584590069631-1c180f90a54c?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzM0MzA2MjU&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                    <img class="item-list__back-img"
+                         src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzQ5MTgzOTI&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                </div>
+                <h3 class="item-list__item-name">Название</h3>
+                <p class="item-list__item-text">Небольшое описание картинки для проверки переноса строки</p>
+                <div class="item-list__prices-list">
+                    <p class="item-list__price"><b>10 000 ₽</b></p>
+                    <p class="item-list__price-without-disc"><s>100 000 ₽</s></p>
+                    <p class="item-list__discount">(90%)</p>
+                </div>
+            </div>
+            <div class="item-list__item">
+                <div class="item-list__duplex-box">
+                    <img class="item-list__front-img"
+                         src="https://images.unsplash.com/photo-1584590069631-1c180f90a54c?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzM0MzA2MjU&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                    <img class="item-list__back-img"
+                         src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzQ5MTgzOTI&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                </div>
+                <h3 class="item-list__item-name">Название</h3>
+                <p class="item-list__item-text">Небольшое описание картинки для проверки переноса строки</p>
+                <div class="item-list__prices-list">
+                    <p class="item-list__price"><b>10 000 ₽</b></p>
+                    <p class="item-list__price-without-disc"><s>100 000 ₽</s></p>
+                    <p class="item-list__discount">(90%)</p>
+                </div>
+            </div>
+            <div class="item-list__item">
+                <div class="item-list__duplex-box">
+                    <img class="item-list__front-img"
+                         src="https://images.unsplash.com/photo-1584590069631-1c180f90a54c?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzM0MzA2MjU&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                    <img class="item-list__back-img"
+                         src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzQ5MTgzOTI&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                </div>
+                <h3 class="item-list__item-name">Название</h3>
+                <p class="item-list__item-text">Небольшое описание картинки для проверки переноса строки</p>
+                <div class="item-list__prices-list">
+                    <p class="item-list__price"><b>10 000 ₽</b></p>
+                    <p class="item-list__price-without-disc"><s>100 000 ₽</s></p>
+                    <p class="item-list__discount">(90%)</p>
+                </div>
+            </div>
+            <div class="item-list__item">
+                <div class="item-list__duplex-box">
+                    <img class="item-list__front-img"
+                         src="https://images.unsplash.com/photo-1584590069631-1c180f90a54c?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzM0MzA2MjU&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                    <img class="item-list__back-img"
+                         src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzQ5MTgzOTI&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                </div>
+                <h3 class="item-list__item-name">Название</h3>
+                <p class="item-list__item-text">Небольшое описание картинки для проверки переноса строки</p>
+                <div class="item-list__prices-list">
+                    <p class="item-list__price"><b>10 000 ₽</b></p>
+                    <p class="item-list__price-without-disc"><s>100 000 ₽</s></p>
+                    <p class="item-list__discount">(90%)</p>
+                </div>
+            </div>
+            <div class="item-list__item">
+                <div class="item-list__duplex-box">
+                    <img class="item-list__front-img"
+                         src="https://images.unsplash.com/photo-1584590069631-1c180f90a54c?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzM0MzA2MjU&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                    <img class="item-list__back-img"
+                         src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzQ5MTgzOTI&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                </div>
+                <h3 class="item-list__item-name">Название</h3>
+                <p class="item-list__item-text">Небольшое описание картинки для проверки переноса строки</p>
+                <div class="item-list__prices-list">
+                    <p class="item-list__price"><b>10 000 ₽</b></p>
+                    <p class="item-list__price-without-disc"><s>100 000 ₽</s></p>
+                    <p class="item-list__discount">(90%)</p>
+                </div>
+            </div>
+            <div class="item-list__item">
+                <div class="item-list__duplex-box">
+                    <img class="item-list__front-img"
+                         src="https://images.unsplash.com/photo-1584590069631-1c180f90a54c?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzM0MzA2MjU&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                    <img class="item-list__back-img"
+                         src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzQ5MTgzOTI&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                </div>
+                <h3 class="item-list__item-name">Название</h3>
+                <p class="item-list__item-text">Небольшое описание картинки для проверки переноса строки</p>
+                <div class="item-list__prices-list">
+                    <p class="item-list__price"><b>10 000 ₽</b></p>
+                    <p class="item-list__price-without-disc"><s>100 000 ₽</s></p>
+                    <p class="item-list__discount">(90%)</p>
+                </div>
+            </div>
+            <div class="item-list__item">
+                <div class="item-list__duplex-box">
+                    <img class="item-list__front-img"
+                         src="https://images.unsplash.com/photo-1584590069631-1c180f90a54c?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzM0MzA2MjU&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                    <img class="item-list__back-img"
+                         src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzQ5MTgzOTI&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                </div>
+                <h3 class="item-list__item-name">Название</h3>
+                <p class="item-list__item-text">Небольшое описание картинки для проверки переноса строки</p>
+                <div class="item-list__prices-list">
+                    <p class="item-list__price"><b>10 000 ₽</b></p>
+                    <p class="item-list__price-without-disc"><s>100 000 ₽</s></p>
+                    <p class="item-list__discount">(90%)</p>
+                </div>
+            </div>
+            <div class="item-list__item">
+                <div class="item-list__duplex-box">
+                    <img class="item-list__front-img"
+                         src="https://images.unsplash.com/photo-1584590069631-1c180f90a54c?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzM0MzA2MjU&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                    <img class="item-list__back-img"
+                         src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzQ5MTgzOTI&ixlib=rb-4.0.3&q=80"
+                         alt="">
+                </div>
+                <h3 class="item-list__item-name">Название</h3>
+                <p class="item-list__item-text">Небольшое описание картинки для проверки переноса строки</p>
+                <div class="item-list__prices-list">
+                    <p class="item-list__price"><b>10 000 ₽</b></p>
+                    <p class="item-list__price-without-disc"><s>100 000 ₽</s></p>
+                    <p class="item-list__discount">(90%)</p>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</div>
+</body>
+</html>

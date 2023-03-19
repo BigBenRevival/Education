@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
+.slider {
+  width: 75%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 30px;
+  /* чтобы sticky работал нужно задать top или bottom */
+  position: sticky;
+  left: 20px;
+}
+.slider .slides {
+  display: flex;
+  justify-content: center;
+}
+.slider .slides .slide img {
+  padding: 2px;
+}
+.slider .arrows {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* top и bottom в связке с margin: auto и position: absolute - растягивают блок по вертикали (и позиционирует по центру если задан height).
+    Аналогично с горизонтальной осью */
+  max-height: 20px;
+  position: absolute;
+  margin: auto;
+  top: -29px;
+  bottom: 0;
+  left: 0;
+}
+.slider .arrows .arrow-prev,
+.slider .arrows .arrow-next {
+  background: #bcbcbc;
+  cursor: pointer;
+}
+.slider .pagination {
+  display: flex;
+  justify-content: center;
+}
+.slider .pagination > div {
+  width: 15px;
+  height: 15px;
+  margin: 7px;
+  background: #123121;
+  border-radius: 100%;
+  cursor: pointer;
+}
+/*# sourceMappingURL=old-styles.css.map */

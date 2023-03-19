@@ -1,0 +1,80 @@
+.absoluteCenter(@top: auto, @right: auto, @bottom: auto, @left: auto) {
+  top: @top;
+  right: @right;
+  bottom: @bottom;
+  left: @left;
+  position: absolute;
+  margin: auto;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.slider {
+  width: 75%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 30px;
+
+  /* чтобы sticky работал нужно задать top или bottom */
+  position: sticky;
+  left: 20px;
+
+  .slides {
+    display: flex;
+    justify-content: center;
+
+    .slide {
+      img {
+        padding: 2px;
+      }
+    }
+  }
+
+  .arrows {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    /* top и bottom в связке с margin: auto и position: absolute - растягивают блок по вертикали (и позиционирует по центру если задан height).
+    Аналогично с горизонтальной осью */
+    max-height: 20px;
+    position: absolute;
+    margin: auto;
+    top: -29px;
+    bottom: 0;
+    left: 0; //явно прижали блок к левому краю, инициировав точное местоположение
+    //.absoluteCenter(-29px, auto, 0, 0);
+
+    .arrow-prev, .arrow-next {
+      background: #bcbcbc;
+      cursor: pointer;
+    }
+
+    .arrow-prev {
+
+    }
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+
+    > div {
+      width: 15px;
+      height: 15px;
+      margin: 7px;
+      background: #123121;
+      border-radius: 100%;
+      cursor: pointer;
+    }
+  }
+}
