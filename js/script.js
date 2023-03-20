@@ -1,3 +1,5 @@
-$(document).ready(function() {
-    $("a.gallery").fancybox();
+$(function (){
+   $('.link-fancy').click(function (){
+      $('.fancy-box').fancybox();
+   });
 });
